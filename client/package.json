@@ -5,8 +5,8 @@
   "dependencies": {
     "navi": "^0.8.4",
     "navi-scripts": "^0.8.5",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
+    "react": "^16.7.0-alpha.2",
+    "react-dom": "^16.7.0-alpha.2",
     "react-navi": "^0.8.4",
     "react-scripts": "2.1.1"
   },
