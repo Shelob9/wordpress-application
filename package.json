@@ -9,7 +9,7 @@
     "start:sever": "nodemon server/index.js",
     "start:client": "cd client && yarn start",
     "test:server": "jest --watch ",
-    "test:client": "cd client && yarn test",
+    "test:client": "cd client && yarn test"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,6 @@
   "bugs": {
     "url": "https://github.com/Shelob9/wordpress-with-nginx-and-letsencrypt/issues"
   },
-  "homepage": "https://github.com/Shelob9/wordpress-with-nginx-and-letsencrypt#readme",
   "dependencies": {
     "axios": "^0.18.0",
     "dotenv": "^6.2.0",

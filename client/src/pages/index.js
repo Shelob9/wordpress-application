@@ -43,6 +43,7 @@ const paths = {
 	}),
 };
 
+
 pages.forEach(page => {
 	const {slug,title} = page;
 	if( slug ){

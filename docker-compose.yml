@@ -52,8 +52,9 @@ services:
     #
     - ./nginx.conf:/etc/nginx/conf.d/default.conf
     #
-    # The webserver will also need to see our Wordpress install.
+    # The webserver will also need to see our WordPress install.
     #
+    - ./wp-content:/var/www/html/wp-content
     - ./wordpress:/var/www/html
     #
     # Write logs here.  Note that they will need to be
@@ -83,27 +84,10 @@ services:
       # Allow larger files to be uploaded
       #
       CLIENT_MAX_BODY_SIZE: 64M
-  # Redis cache, not in use yet
-  redis:
-    image: redis
-    container_name: redis_cache
-    expose:
-    - 6379
-  wordpress_phpunit:
-    image: chriszarate/wordpress-phpunit
-    environment:
-      PHPUNIT_DB_HOST: mysql
-    volumes:
-    - .:/app
-    - testsuite:/tmp
-    - wordpress:/var/www/html
-    - ./wp-content:/var/www/html/wp-content
   cli:
     image: wordpress:cli
     volumes:
-    - wordpress:/var/www/html
+    - ./wordpress:/var/www/html
     - ./wp-content:/var/www/html/wp-content
-volumes:
-  testsuite:
-  wordpress:
+
 

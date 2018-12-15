@@ -1,5 +1,7 @@
 # Install WordPress in Docker with Nginx and Lets Encrypt for HTTPS And Also React and Express
 
+Forked from: https://github.com/dmuth/wordpress-with-nginx-and-letsencrypt
+
 ## Install
 * Clone from Github
 * Install
@@ -27,4 +29,4 @@
 * https://github.com/esausilva/example-create-react-app-express
 * https://dev.to/nburgess/creating-a-react-app-with-react-router-and-an-express-backend-33l3
 * https://codewithhugo.com/testing-an-express-app-with-supertest-moxios-and-jest/
-
+* https://humanmade.com/2018/11/26/hot-module-replacement-for-gutenberg-blocks/
