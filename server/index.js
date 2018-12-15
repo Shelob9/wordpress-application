@@ -2,6 +2,7 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
+require('dotenv').load();
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -16,10 +17,12 @@ prepareApp(app);
 
 //Bring in routers
 const roy = require('./roy');
+const pages = require( './wp-pages');
 app.use(roy());
+app.use(pages());
 // API calls
 app.get('/api/hello', (req, res) => {
-	res.send({ hi: 'Roy' });
+	res.send({ hi:  process.env });
 });
 
 if (process.env.NODE_ENV === 'production') {
