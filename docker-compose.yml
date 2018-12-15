@@ -36,6 +36,8 @@ services:
        # and we want that to be exported so we have a copy of our code.
        #
        - ./wordpress:/var/www/html
+       # use our wp-content
+       - ./wp-content:/var/www/html/wp-content
      environment:
        WORDPRESS_DB_HOST: db:3306
        WORDPRESS_DB_USER: wordpress
@@ -56,11 +58,11 @@ services:
        #
        - ./wordpress:/var/www/html
        #
-       # Write logs here.  Note that they will need to be 
+       # Write logs here.  Note that they will need to be
        # rotated on the parent system.
        #
        - ./logs:/var/log/nginx
-     
+
 
    https-portal:
      image: steveltn/https-portal:1
