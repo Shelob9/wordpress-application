@@ -10,6 +10,10 @@
     `docker-compose up -d`
 * Start Node Client and Server
     `yarn start`
+    
+## Test
+* Run All JavaScript Tests
+    `yarn test`
 
 ### Blog posts I was reading while I made this:
 

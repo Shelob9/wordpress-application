@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About component matches snapshot 1`] = `
+<div>
+  <h2>
+    This is the about page
+  </h2>
+  <p>
+    This route was compiled and handled by Navi, including all the heavy lifting for SEO, creating sitemaps including this page, code-splitting, etc!
+  </p>
+</div>
+`;
