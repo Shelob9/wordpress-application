@@ -6,18 +6,21 @@ const bodyParser = require('body-parser');
 const app = express();
 const port = process.env.PORT || 5000;
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+function prepareApp(app){
+	app.use(bodyParser.json());
+	app.use(bodyParser.urlencoded({ extended: true }));
+}
+
+prepareApp(app);
 
 
-const roy = require('./server/roy');
+//Bring in routers
+const roy = require('./roy');
 app.use(roy());
-
 // API calls
 app.get('/api/hello', (req, res) => {
 	res.send({ hi: 'Roy' });
 });
-
 
 if (process.env.NODE_ENV === 'production') {
 	// Serve any static files

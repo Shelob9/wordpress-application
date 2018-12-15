@@ -2,11 +2,11 @@
   "name": "wordpress-with-nginx-and-letsencrypt",
   "version": "1.0.0",
   "description": "Wow, that was a mouthful.  But yeah, that's what this repo does.",
-  "main": "index.js",
+  "main": "server/index.js",
   "scripts": {
     "start": "concurrently --kill-others-on-fail \"yarn start:sever\" \"yarn start:client\"",
     "test": "concurrently --kill-others-on-fail \"yarn test:server\" \"yarn test:client\"",
-    "start:sever": "nodemon server.js",
+    "start:sever": "nodemon server/index.js",
     "start:client": "cd client && yarn start",
     "test:server": "jest --watch ",
     "test:client": "cd client && yarn test"
@@ -25,7 +25,9 @@
   "dependencies": {
     "axios": "^0.18.0",
     "express": "^4.16.4",
-    "redis": "^2.8.0"
+    "redis": "^2.8.0",
+    "redis-server": "^1.2.2",
+    "util": "^0.11.1"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",

@@ -1,6 +1,4 @@
 import * as React from 'react'
-import { NavLink } from 'react-navi'
-import useFetch, { useJsonResponse } from 'react-use-fetch';
 
 export class Roy extends React.Component {
 
@@ -11,14 +9,6 @@ export class Roy extends React.Component {
 		location: ''
 	};
 	componentDidMount(){
-		fetch( '/api/hello')
-			.then(r=> r.json() )
-			.then(response => this.setState({
-				error:true,
-				loading:false,
-				hi:response.hi
-			}))
-			.catch(e => this.setState({error:true,loading:false}))
 		fetch( '/api/roy')
 			.then(r=> r.json() )
 			.then(response => this.setState({
@@ -29,7 +19,7 @@ export class Roy extends React.Component {
 
 	}
 	render(){
-		const {hi,location,loading,error} = this.state;
+		const {location,loading,error} = this.state;
 		if( loading ){
 			return <div>Loading...</div>
 		}
@@ -39,9 +29,7 @@ export class Roy extends React.Component {
 		return (
 			<div>
 				<h2>Hi Roy</h2>
-				<p>Location according to Github {location}</p>
-				<p>Api says Hi {hi}</p>
-				<nav><NavLink href="/">Back to the index</NavLink></nav>
+				<p>Roy's Location according to Github is: {location}</p>
 			</div>
 		)
 	}

@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { NavLink } from 'react-navi'
 
 export default function About() {
 	return (

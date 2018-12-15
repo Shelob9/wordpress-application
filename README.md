@@ -20,7 +20,7 @@
 * https://zeit.co/blog/painless-routing-react-navi-now
 * https://wp.dmuth.org/wordpress-5-in-docker-with-nginx-and-letsencrypt/
 * https://medium.freecodecamp.org/how-to-make-create-react-app-work-with-a-node-backend-api-7c5c48acb1b0
-* https://github.com/esausilva/example-create-react-app-express/blob/master/package.json
+* https://github.com/esausilva/example-create-react-app-express
 * https://dev.to/nburgess/creating-a-react-app-with-react-router-and-an-express-backend-33l3
-
+* https://codewithhugo.com/testing-an-express-app-with-supertest-moxios-and-jest/
 
