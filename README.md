@@ -3,7 +3,7 @@
 ## Install
 * Clone from Github
 * Install
-    `yarn install`
+    `yarn && composer install && cd client && yarn`
 
 ## Start
 * Start WordPress

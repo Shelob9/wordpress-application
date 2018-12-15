@@ -10,7 +10,6 @@
     "start:client": "cd client && yarn start",
     "test:server": "jest --watch ",
     "test:client": "cd client && yarn test",
-    "install": "yarn && composer install && cd client && yarn"
   },
   "repository": {
     "type": "git",

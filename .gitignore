@@ -17,3 +17,5 @@ ssl_certs/
 /client/node_modules/
 /server/content/
 /client/src/pages.json
+/vendor
+.env
