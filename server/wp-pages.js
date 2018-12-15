@@ -38,7 +38,7 @@ module.exports = (url = 'https://localhost', router = new Router()) => {
 			const site = await getWpSite(url);
 			try {
 				const page = await site.pages().slug( slug );
-				//cachePage(dirName,page[0]);
+				cachePage(dirName,page[0]);
 				return res.status(200).json(page[0]);
 			} catch (e) {
 				res.status(500);
@@ -70,7 +70,7 @@ module.exports = (url = 'https://localhost', router = new Router()) => {
 
 	//Regenerate cache
 	//@TODO Better way to do this.
-	router.get('/api/cache/pages', async (req, res) => {
+	router.post('/api/cache/pages', async (req, res) => {
 		const site = await getWpSite(url);
 		const fs = require('fs');
 		const dirName = __dirname;
@@ -78,17 +78,37 @@ module.exports = (url = 'https://localhost', router = new Router()) => {
 
 		getAllFromWordPress(site.pages()).then(function( pages ) {
 			const  created= [];
-			Object.values(pages).forEach(page => {
+			const cachedPages = [];
+;
+				Object.values(pages).forEach(page => {
 				const {slug} = page;
 				if( slug ){
-					cachePage(dirName,page);
+					const cachePageName = cachePage(dirName,page)
+					created.push(cachePageName);
+					cachedPages.push({
+						title: page.title.rendered,
+						slug,
+						data: cachePageName
+					})
 				}
 			});
+			const path = require('path');
+			const pageMap = path.resolve(__dirname, '..') + '/client/src/pages.json';
+			fs.writeFileSync(pageMap , JSON.stringify(cachedPages));
 
 			return res.status(200).json(created);
 		}
 		);
 
+	});
+
+	router.get('/api/cache/pages', async (req, res) => {
+
+		const site = await getWpSite(url);
+		const fs = require('fs');
+		const dirName = __dirname;
+		const getCachedPages = require( './util/getCachedPages');
+		return res.status(200).json(getCachedPages(dirName));
 	});
 
 	return router;

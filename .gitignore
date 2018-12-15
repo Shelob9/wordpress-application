@@ -16,3 +16,4 @@ ssl_certs/
 /client/node_modules/
 /client/node_modules/
 /server/content/
+/client/src/pages.json
