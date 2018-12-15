@@ -2,6 +2,8 @@
 import {createPage, createSwitch} from 'navi'
 import * as React from 'react'
 import {NavLink} from 'react-navi'
+import {Roy} from "./Roy";
+
 
 // Create the switch
 export default createSwitch({
@@ -26,7 +28,11 @@ export default createSwitch({
 		// Create the roy route
 		'/roy': createPage({
 			title: "Roy",
-			getContent: () => import('./Roy')
+			getContent: () => {
+				return (
+					<Roy/>
+				)
+			}
 		}),
 	}
 })
