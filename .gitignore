@@ -6,9 +6,12 @@ data/
 logs/
 wordpress/
 ssl_certs/
-.idea
+.idea/
 /wp-content
 !/wp-content/mu-plugins
 !/wp-content/plugins/hello.php
 !/wp-content/plugins/index.php
 !/wp-content/themes/index.php
+/node_modules/
+/client/node_modules/
+/client/node_modules/
