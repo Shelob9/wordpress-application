@@ -22,7 +22,7 @@ app.use(roy());
 app.use(pages());
 // API calls
 app.get('/api/hello', (req, res) => {
-	res.send({ hi:  process.env });
+	res.send({ hi:  'Roy' });
 });
 
 if (process.env.NODE_ENV === 'production') {
