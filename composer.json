@@ -1,0 +1,21 @@
+{
+  "scripts" : {
+    "start": "docker-compose up -d",
+    "test:php": "composer test:unit && composer wp:tests",
+    "test:unit": "phpunit --configuration phpunit-unit.xml.dist",
+    "wp:tests": "docker-compose run --rm wordpress_phpunit phpunit --configuration phpunit-integration.xml.dist",
+    "wp:install": "bash ./bin/install-tests.sh"
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "shelob9\\something\\Tests\\Unit\\": "tests/Unit/",
+      "shelob9\\something\\Tests\\Integration\\": "tests/Integration/",
+      "shelob9\\something\\Tests\\Traits\\": "tests/Traits/",
+      "shelob9\\something\\Tests\\Mock\\": "tests/Mock/",
+      "shelob9\\something\\Tests\\Util\\": "tests/Util/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.5"
+  }
+}

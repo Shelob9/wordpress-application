@@ -2,8 +2,8 @@
 
 ## Install
 * Clone from Github
-* Yarn
-    `yarn && cd client && yarn`
+* Install
+    `yarn install`
 
 ## Start
 * Start WordPress
@@ -14,6 +14,10 @@
 ## Test
 * Run All JavaScript Tests
     `yarn test`
+* Run PHP Unit Tests
+    `composer test:unit`
+* Run WordPress Integration Tests
+    `composer wp:tests`
 
 ### Blog posts I was reading while I made this:
 
