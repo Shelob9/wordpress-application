@@ -37,7 +37,7 @@ const paths = {
 		title: "Roy",
 		getContent: () => {
 			return (
-				<div>1</div>
+				<Roy/>
 			)
 		}
 	}),
