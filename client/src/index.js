@@ -1,11 +1,12 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import { createBrowserNavigation } from 'navi'
-import pages from './pages'
+import pages from './pages/index'
 import App from './App'
 
 async function main() {
-	let navigation = createBrowserNavigation({ pages })
+	console.log(pages)
+	let navigation = createBrowserNavigation({ pages });
 
 	// Wait until async content is ready.
 	await navigation.steady()

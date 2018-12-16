@@ -3,8 +3,6 @@ import {NavProvider, NavRoute, NavNotFoundBoundary, NavLink} from 'react-navi';
 import logo from './logo.svg';
 import './App.css';
 
-const pages = require( './pages');
-
 const Menu = () => (
 	<nav>
 		<ul>
@@ -17,14 +15,6 @@ const Menu = () => (
 			<li>
 				<NavLink href="/roy">Roy Page</NavLink>
 			</li>
-			{pages.map(page => {
-				const {title,slug} = page;
-				return (
-					<li>
-						<NavLink href={'/pages/'+slug}>{title}</NavLink>
-					</li>
-				)
-			})}
 		</ul>
 	</nav>
 

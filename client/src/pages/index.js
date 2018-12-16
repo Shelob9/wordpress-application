@@ -43,24 +43,24 @@ const paths = {
 	}),
 };
 
-if( 1 === 3 ){
-	const _pages = require( '../pages');
-	_pages.forEach(page => {
-		const {slug,title} = page;
-		if( slug ){
-			paths['/pages/' + slug ] = createPage({
-				title,
-				getContent: () => {
-					return (
-						<WpPage pageSlug={slug} apiRoot={'/api/pages/'}/>
-					)
 
-				}
-			});
-		}
+const _pages = require( '../pages');
+_pages.forEach(page => {
+	const {slug,title} = page;
+	if( slug ){
+		paths['/pages/' + slug ] = createPage({
+			title,
+			getContent: () => {
+				return (
+					<WpPage pageSlug={slug} apiRoot={'/api/pages/'}/>
+				)
 
-	});
-}
+			}
+		});
+	}
+
+});
+
 
 
 
