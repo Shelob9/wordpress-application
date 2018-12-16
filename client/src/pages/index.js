@@ -5,7 +5,7 @@ import {NavLink} from 'react-navi'
 import {Roy} from "./Roy";
 import {WpPage} from "./WpPage";
 
-const pages = require( '../pages');
+
 
 
 const paths = {
@@ -43,22 +43,26 @@ const paths = {
 	}),
 };
 
+if( 1 === 3 ){
+	const _pages = require( '../pages');
+	_pages.forEach(page => {
+		const {slug,title} = page;
+		if( slug ){
+			paths['/pages/' + slug ] = createPage({
+				title,
+				getContent: () => {
+					return (
+						<WpPage pageSlug={slug} apiRoot={'/api/pages/'}/>
+					)
 
-pages.forEach(page => {
-	const {slug,title} = page;
-	if( slug ){
-		paths['/pages/' + slug ] = createPage({
-			title,
-			getContent: () => {
-				return (
-					<WpPage pageSlug={slug} apiRoot={'/api/pages/'}/>
-				)
+				}
+			});
+		}
 
-			}
-		});
-	}
+	});
+}
 
-});
+
 
 
 

@@ -36,6 +36,7 @@ services:
     - ./wordpress:/var/www/html
     # use our wp-content
     - ./wp-content:/var/www/html/wp-content
+    - ./vendor:/var/www/html/vendor
     environment:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: wordpress

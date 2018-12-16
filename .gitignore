@@ -4,14 +4,9 @@
 #
 data/
 logs/
-wordpress/
 ssl_certs/
 .idea/
-/wp-content
-!/wp-content/mu-plugins
-!/wp-content/plugins/hello.php
-!/wp-content/plugins/index.php
-!/wp-content/themes/index.php
+
 /node_modules/
 /client/node_modules/
 /client/node_modules/
@@ -19,7 +14,13 @@ ssl_certs/
 /client/src/pages.json
 /vendor
 .env
-!/wp-content/plugins/blocks-plugin/
-/wp-content/plugins/blocks-plugin/node_modules
-/wp-content/plugins/blocks-plugin/vendor
+
+/wordpress/
+wp-content/*
+!wp-content/**/
+!wp-content/mu-plugins/**
+wp-content/plugins/*
+wp-content/themes/*
+!wp-content/plugins/**/
+!wp-content/plugins/blocks-plugin/**
 
