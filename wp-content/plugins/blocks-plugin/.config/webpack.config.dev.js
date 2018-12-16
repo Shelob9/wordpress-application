@@ -2,11 +2,11 @@
  * This file defines the configuration for development and dev-server builds.
  */
 const { unlinkSync } = require( 'fs' );
+const path = require( 'path' );
 const { join } = require( 'path' );
 const onExit = require( 'signal-exit' );
 const webpack = require( 'webpack' );
 const ManifestPlugin = require( 'webpack-manifest-plugin' );
-
 const externals = require( './externals' );
 
 // Clean up manifest on exit.
@@ -28,6 +28,11 @@ module.exports = {
 	mode: 'development',
 	devtool: 'cheap-module-source-map',
 	context: process.cwd(),
+	resolve: {
+		alias: {
+			CallToAction: path.resolve(__dirname, '../../../../../../client/src/components/call-to-action'),
+		}
+	},
 
 	// Allow config to override shared devServer properties.
 	devServer: {

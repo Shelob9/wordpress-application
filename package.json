@@ -23,6 +23,8 @@
     "url": "https://github.com/Shelob9/wordpress-with-nginx-and-letsencrypt/issues"
   },
   "dependencies": {
+    "@wordpress/components": "^7.0.4",
+    "@wordpress/compose": "^3.0.0",
     "@wordpress/editor": "^9.0.5",
     "axios": "^0.18.0",
     "dotenv": "^6.2.0",

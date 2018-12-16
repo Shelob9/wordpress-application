@@ -4,6 +4,7 @@ import * as React from 'react'
 import {NavLink} from 'react-navi'
 import {Roy} from "./Roy";
 import {WpPage} from "./WpPage";
+import CallToAction from "./CallToAction";
 
 
 
@@ -24,6 +25,12 @@ const paths = {
 	'/about': createPage({
 		title: "About",
 		getContent: () => import('./About')
+	}),
+	'/call-to-action': createPage({
+		title: "Call To Action",
+		getContent: () => (
+			<CallToAction/>
+		)
 	}),
 	'/roy': createPage({
 		title: "Roy",

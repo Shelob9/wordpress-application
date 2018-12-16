@@ -27,6 +27,8 @@ const externals = [
 	'element',
 	'i18n',
 	'plugins',
+	'components',
+	'editor'
 ].reduce( ( externals, name ) => ( {
 	...externals,
 	[ `@wordpress/${ name }` ]: `wp.${ camelCaseDash( name ) }`,
