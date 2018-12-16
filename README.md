@@ -1,4 +1,5 @@
-# Install WordPress in Docker with Nginx and Lets Encrypt for HTTPS And Also React and Express
+# WordPress Application
+Docker-based Headless WordPress.
 
 Forked from: https://github.com/dmuth/wordpress-with-nginx-and-letsencrypt
 
@@ -23,7 +24,7 @@ Forked from: https://github.com/dmuth/wordpress-with-nginx-and-letsencrypt
 * Run WordPress Integration Tests
     `composer wp:tests`
 
-### Blog posts I was reading while I made this:
+### What I was reading while I made this:
 
 * https://zeit.co/blog/painless-routing-react-navi-now
 * https://wp.dmuth.org/wordpress-5-in-docker-with-nginx-and-letsencrypt/
