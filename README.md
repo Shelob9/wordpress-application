@@ -12,6 +12,8 @@ Forked from: https://github.com/dmuth/wordpress-with-nginx-and-letsencrypt
     `docker-compose up -d`
 * Start Node Client and Server
     `yarn start`
+* Start Blocks
+    `yarn start:blocks`
     
 ## Test
 * Run All JavaScript Tests
@@ -30,3 +32,4 @@ Forked from: https://github.com/dmuth/wordpress-with-nginx-and-letsencrypt
 * https://dev.to/nburgess/creating-a-react-app-with-react-router-and-an-express-backend-33l3
 * https://codewithhugo.com/testing-an-express-app-with-supertest-moxios-and-jest/
 * https://humanmade.com/2018/11/26/hot-module-replacement-for-gutenberg-blocks/
+* https://github.com/zgordon/gutenberg-course
