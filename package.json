@@ -4,9 +4,9 @@
   "description": "Wow, that was a mouthful.  But yeah, that's what this repo does.",
   "main": "server/index.js",
   "scripts": {
-    "start": "concurrently --kill-others-on-fail \"yarn start:sever\" \"yarn start:client\"",
+    "start": "concurrently --kill-others-on-fail \"yarn start:server\" \"yarn start:client\"",
     "test": "concurrently --kill-others-on-fail \"yarn test:server\" \"yarn test:client\"",
-    "start:sever": "nodemon server/index.js",
+    "start:server": "nodemon server/index.js",
     "start:client": "cd client && yarn start",
     "start:blocks": "cd wp-content/plugins/blocks-plugin && yarn start",
     "test:server": "jest --watch ",

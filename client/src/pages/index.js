@@ -52,21 +52,24 @@ const paths = {
 
 
 const _pages = require( '../pages');
-_pages.forEach(page => {
-	const {slug,title} = page;
+if( Array.isArray(_pages) && _pages.length ){
+	_pages.forEach(page => {
+		const {slug,title} = page;
 	if( slug ){
 		paths['/pages/' + slug ] = createPage({
-			title,
-			getContent: () => {
+				title,
+				getContent: () => {
 				return (
-					<WpPage pageSlug={slug} apiRoot={'/api/pages/'}/>
-				)
+			<WpPage pageSlug={slug} apiRoot={'/api/pages/'}/>
+	)
 
-			}
-		});
+	}
+	});
 	}
 
 });
+}
+
 
 
 
