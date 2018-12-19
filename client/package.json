@@ -38,5 +38,8 @@
       "!**/wordpress/**",
       "!**/wp-content/**"
     ]
+  },
+  "devDependencies": {
+    "@wordpress/babel-preset-default": "^3.0.1"
   }
 }

@@ -28,12 +28,6 @@ module.exports = {
 	mode: 'development',
 	devtool: 'cheap-module-source-map',
 	context: process.cwd(),
-	resolve: {
-		alias: {
-			CallToAction: path.resolve(__dirname, '../../../../../../client/src/components/call-to-action'),
-		}
-	},
-
 	// Allow config to override shared devServer properties.
 	devServer: {
 		headers: {

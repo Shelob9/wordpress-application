@@ -1,9 +1,9 @@
 export const name = 'hmr-demo/block-a';
 const attributes = require( './attributes');
-import {
-	Ui,
-	Save
-} from '../../../../../../client/src/components/call-to-action';
+import React from 'react';
+
+import {Ui,Save} from '../../components/call-to-action'
+
 
 export const options = {
 	title: 'Call To Action Block',
@@ -16,7 +16,7 @@ export const options = {
 		const onChangeMessage = (message) => setAttributes({message});
 		return <Ui message={message} className={className} onChangeMessage={onChangeMessage} />
 	},
-	save({attribues,className}){
-		return <Save className={className} message={attribues.message}/>
+	save({attributes,className}){
+		return <Save className={className} message={attributes.message}/>
 	}
 };

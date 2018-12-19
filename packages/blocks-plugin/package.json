@@ -26,6 +26,8 @@
   "dependencies": {
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-stage-0": "^7.0.0",
-    "@wordpress/plugins": "^2.0.9"
+    "@wordpress/plugins": "^2.0.9",
+    "call-to-action": "file:../call-to-action"
+
   }
 }

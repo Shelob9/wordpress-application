@@ -36,6 +36,7 @@ services:
     - ./wordpress:/var/www/html
     # use our wp-content
     - ./wp-content:/var/www/html/wp-content
+    - ./packages/blocks-plugin:/var/www/html/wp-content/plugins/blocks-plugin
     - ./vendor:/var/www/html/vendor
     environment:
       WORDPRESS_DB_HOST: db:3306
@@ -56,6 +57,7 @@ services:
     # The webserver will also need to see our WordPress install.
     #
     - ./wp-content:/var/www/html/wp-content
+    - ./packages/blocks-plugin:/var/www/html/wp-content/plugins/blocks-plugin
     - ./wordpress:/var/www/html
     #
     # Write logs here.  Note that they will need to be
